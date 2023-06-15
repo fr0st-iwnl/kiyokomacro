@@ -18,9 +18,9 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
-Free macro for Mighty Omega. My Discord for more info [Link](https://discord.gg/4rxfjtnMGt)
+
+## About The Macro
+Free macro for Mighty Omega. My Discord for more info [Link](https://discord.gg/RCc6ntue5j)
 
 
 
@@ -29,7 +29,7 @@ Free macro for Mighty Omega. My Discord for more info [Link](https://discord.gg/
 <!-- GETTING STARTED -->
 ## Getting Started
 
-First step is you want to install autohotkey 
+First step - Install AutoHotKey
 
 
 
@@ -43,8 +43,7 @@ First step is you want to install autohotkey
 • How to Download it? [this](https://youtu.be/Y02T8AiiJxw)
 
 ### Tutorial
-   • Watch [this](https://www.youtube.com/watch?v=k5x4WTynWS0&ab_channel=caprisun) video <br>
-    more info [Discord](https://discord.gg/4rxfjtnMGt)
+   • More info [Discord](https://discord.gg/4rxfjtnMGt)
 
 
 
