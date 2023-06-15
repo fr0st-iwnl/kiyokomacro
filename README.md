@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-<h3 align="center">Vivace's Mighty Omega Macro</h3>
+<h3 align="center">Kiyoko's Mighty Omega Macro</h3>
 
   <p align="center">
     Macro for mighty omega using Autohotkey!
@@ -8,11 +8,8 @@
     <a href="https://www.roblox.com/games/4878988249"><strong>Game Link »</strong></a>
     <br />
     <br />
-    <a href="https://discord.gg/4rxfjtnMGt">Discord</a>
+    <a href="https://discord.gg/RCc6ntue5j">Discord</a>
     ·
-    <a href="https://discord.gg/4rxfjtnMGt">Report Bug</a>
-    ·
-    <a href="https://discord.gg/4rxfjtnMGt">Request Feature</a>
   </p>
 </div>
 
