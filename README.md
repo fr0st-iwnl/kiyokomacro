@@ -43,7 +43,7 @@ First step - Install AutoHotKey
 • How to Download it? [this](https://youtu.be/Y02T8AiiJxw)
 
 ### Tutorial
-   • More info [Discord](https://discord.gg/4rxfjtnMGt)
+   • More info [Discord](https://discord.gg/RCc6ntue5j)
 
 
 
