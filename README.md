@@ -9,7 +9,6 @@
     <br />
     <br />
     <a href="https://discord.gg/RCc6ntue5j">Discord</a>
-    ·
   </p>
 </div>
 
