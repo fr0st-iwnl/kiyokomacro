@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-<h3 align="center">Kiyoko's Mighty Omega Macro</h3>
+<h3 align="center">💻 Kiyoko's Mighty Omega Macro</h3>
 
   <p align="center">
     Macro for mighty omega using Autohotkey!
