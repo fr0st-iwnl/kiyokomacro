@@ -39,9 +39,9 @@ Notify("Checking Webhook. . .")
 switch CheckforWebhook() {
     case "Missing" : {
         Notify("Enter Webhook")
-        InputBox, Webhook, Enter Webhook,, hide, 300 , 100
+        InputBox, Webhook, Enter Webhook (For SS put ur Webhook),, hide, 300 , 100
         Notify("Enter UserID")
-        InputBox, UserID, Enter User ID,,, 300 , 100
+        InputBox, UserID, Enter User ID (For SS put ur User ID),,, 300 , 100
         If (!UserID) or (!Webhook) {
             Notify("No Webhook")
             MsgBox,,Kiyoko's Macro, Are you sure? No webhook?
