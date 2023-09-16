@@ -44,10 +44,7 @@ Free macro for Mighty Omega. My Discord for more info → [Link](https://discord
 ### Community
    • More info → [Discord](https://discord.gg/RCc6ntue5j)
 
-
-
-
-<!-- <p align="right">(<a href="#top">back to top</a>)</p>
+![Macro](https://cdn.discordapp.com/attachments/805554377745235974/1152656629112783040/kiyokos_macro_banner.png)
 
 
 
