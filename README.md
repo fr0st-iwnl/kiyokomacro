@@ -5,6 +5,7 @@
   <p align="center">
     Macro for the game Mighty Omega using AutoHotkey
     <br />
+    <br />
     <a href="https://www.roblox.com/games/4878988249"><strong>Game Link »</strong></a>
     <br />
     <br />
@@ -36,12 +37,12 @@ Free macro for Mighty Omega. My Discord for more info → [Link](https://discord
 
 ### Installation
 
-1. Download Autohotkey at [this](https://www.autohotkey.com/)
-2. Install WinRAR
+1. Download AutoHotkey → [Link](https://www.autohotkey.com/)
+2. Install WinRAR → [Link](https://www.win-rar.com/start.html?&L=0)
 3. Download my macro
 
 ### Community
-   • More info [Discord](https://discord.gg/RCc6ntue5j)
+   • More info → [Discord](https://discord.gg/RCc6ntue5j)
 
 
 
