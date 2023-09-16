@@ -29,16 +29,18 @@ Free macro for Mighty Omega. My Discord for more info → [Link](https://discord
 <!-- GETTING STARTED -->
 ## Getting Started
 
-First step - Install AutoHotKey
+- https://www.youtube.com/watch?v=4BbKNg0KraQ
+- https://www.youtube.com/watch?v=z9xG2OrK1UM
 
 
 
 ### Installation
 
 1. Download Autohotkey at [this](https://www.autohotkey.com/)
-2. Install Program
+2. Install WinRAR
+3. Download my macro
 
-### Tutorial
+### Community
    • More info [Discord](https://discord.gg/RCc6ntue5j)
 
 
