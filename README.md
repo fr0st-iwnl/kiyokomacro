@@ -20,7 +20,7 @@
 
 
 ## About The Macro
-Free macro for Mighty Omega. My Discord for more info [Link](https://discord.gg/RCc6ntue5j)
+Free macro for Mighty Omega. My Discord for more info → [Link](https://discord.gg/RCc6ntue5j)
 
 
 
