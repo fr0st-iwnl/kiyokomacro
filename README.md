@@ -30,8 +30,8 @@ Free macro for Mighty Omega. My Discord for more info → [Link](https://discord
 <!-- GETTING STARTED -->
 ## Getting Started
 
-- https://www.youtube.com/watch?v=4BbKNg0KraQ
-- https://www.youtube.com/watch?v=z9xG2OrK1UM
+Zen's Video - https://www.youtube.com/watch?v=4BbKNg0KraQ
+Kiyoko's Video - https://www.youtube.com/watch?v=0uUlHG9pidc
 
 
 
