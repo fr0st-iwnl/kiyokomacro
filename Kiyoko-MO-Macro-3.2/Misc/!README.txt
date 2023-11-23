@@ -1,1 +1,0 @@
-For the Push Up & Squat Macros press on F1 to activate them.
