@@ -13,7 +13,12 @@
     <a href="https://www.roblox.com/games/4878988249"><strong>Game Link »</strong></a>
     <br />
     <br />
-    <a href="https://discord.gg/RCc6ntue5j">My Discord</a>
+    <p align="center">
+  <a href="https://kiyokosmacros.netlify.app" target="_blank">🌐 Website</a>
+  •
+  <a href="https://discord.gg/8xPc9x4Gus" target="_blank">☎️ Discord</a>
+  •
+</p>
   </p>
 </div>
 
