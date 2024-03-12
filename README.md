@@ -45,7 +45,7 @@ Kiyoko's Video - https://www.youtube.com/watch?v=0uUlHG9pidc
 ### Community
    • More info → [Discord](https://discord.gg/RCc6ntue5j)
 
-![Macro](https://cdn.discordapp.com/attachments/805554377745235974/1152657920576720966/GitHub_Banner.png)
+![Macro](https://cdn.discordapp.com/attachments/805554377745235974/1217181582343934072/kiyokothumbnail.png?ex=660317af&is=65f0a2af&hm=d94644e71569f317f3eb6d80d5661d99a1d9828355e5255b1530761042dbd4d9&)
 
 
 
