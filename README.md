@@ -54,5 +54,5 @@ Kiyoko's Video - https://www.youtube.com/watch?v=0uUlHG9pidc
 ### Community
    • More info → [Discord](https://discord.gg/RCc6ntue5j)
 
-![Macro](https://raw.githubusercontent.com/fr0st-iwnl/assets/main/thumbnails/image.png)
+![Macro](https://raw.githubusercontent.com/fr0st-iwnl/assets/main/thumbnails/kiyokothumbnail.png)
 
