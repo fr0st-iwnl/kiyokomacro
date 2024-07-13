@@ -48,8 +48,8 @@ Kiyoko's Video - https://www.youtube.com/watch?v=0uUlHG9pidc
 ### Installation
 
 1. Download AutoHotkey → [Link](https://www.autohotkey.com/)
-2. Install WinRAR → [Link](https://www.win-rar.com/start.html?&L=0)
-3. Download my macro
+2. Download my macro
+3. Extract the macro and run it
 
 ### Community
    • More info → [Discord](https://discord.gg/RCc6ntue5j)
