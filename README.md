@@ -51,6 +51,9 @@ Kiyoko's Video - https://www.youtube.com/watch?v=0uUlHG9pidc
 2. Download my macro
 3. Extract the macro and run it
 
+### FAQ
+   • If you encounter any issue/problem READ the → [FAQ](https://kiyokosmacros.netlify.app/faq)
+
 ### Community
    • More info → [Discord](https://discord.gg/RCc6ntue5j)
 
