@@ -47,7 +47,7 @@ Kiyoko's Video - https://www.youtube.com/watch?v=0uUlHG9pidc
 
 ### Installation
 
-1. Download AutoHotkey → [Link](https://www.autohotkey.com/)
+1. Download AutoHotkey v1.1 (deprecated) → [Link](https://www.autohotkey.com/)
 2. Download my macro
 3. Extract the macro and run it
 
