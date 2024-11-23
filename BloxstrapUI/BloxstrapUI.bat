@@ -137,21 +137,30 @@ goto waitloop
 :modifyJson
 powershell -Command ^
     "$settingsPath = '%settingsPath%'; " ^
-    "$jsonContent = Get-Content -Path $settingsPath -Raw; " ^
-    "if ($jsonContent.Trim() -eq '{}' -or $jsonContent.Trim() -eq '') { " ^
+    "$jsonContent = Get-Content -Path $settingsPath -Raw -ErrorAction SilentlyContinue; " ^
+    "if ($jsonContent -eq $null -or $jsonContent.Trim() -eq '') { " ^
+    "    Write-Output '%COLOR_YELLOW%ClientAppSettings.json is empty or missing. Creating new JSON structure...%COLOR_RESET%'; " ^
     "    $newJson = @{ 'FFlagEnableInGameMenuChromeABTest4' = '%setting_value%' }; " ^
     "    $newJson | ConvertTo-Json -Depth 10 | Set-Content -Path $settingsPath -Force; " ^
-    "    Write-Output '%COLOR_GREEN%ClientAppSettings.json has been modified with the new setting.%COLOR_RESET%' " ^
+    "    Write-Output '%COLOR_GREEN%ClientAppSettings.json has been created with the new setting.%COLOR_RESET%' " ^
     "} else { " ^
-    "    $json = $jsonContent | ConvertFrom-Json; " ^
-    "    if (-not $json.PSObject.Properties.Match('FFlagEnableInGameMenuChromeABTest4')) { " ^
-    "        $json | Add-Member -MemberType NoteProperty -Name 'FFlagEnableInGameMenuChromeABTest4' -Value '%setting_value%'; " ^
-    "    } else { " ^
-    "        $json.FFlagEnableInGameMenuChromeABTest4 = '%setting_value%'; " ^
+    "    try { " ^
+    "        $json = $jsonContent | ConvertFrom-Json; " ^
+    "        if (-not $json.PSObject.Properties.Match('FFlagEnableInGameMenuChromeABTest4')) { " ^
+    "            $json | Add-Member -MemberType NoteProperty -Name 'FFlagEnableInGameMenuChromeABTest4' -Value '%setting_value%'; " ^
+    "        } else { " ^
+    "            $json.FFlagEnableInGameMenuChromeABTest4 = '%setting_value%'; " ^
+    "        } " ^
+    "        $json | ConvertTo-Json -Depth 10 | Set-Content -Path $settingsPath -Force; " ^
+    "        Write-Output '%COLOR_YELLOW%ClientAppSettings.json has been updated with the new setting.%COLOR_RESET%' " ^
+    "    } catch { " ^
+    "        Write-Output '%COLOR_RED%Error: The JSON file is malformed. Reinitializing the file with correct structure.%COLOR_RESET%'; " ^
+    "        $newJson = @{ 'FFlagEnableInGameMenuChromeABTest4' = '%setting_value%' }; " ^
+    "        $newJson | ConvertTo-Json -Depth 10 | Set-Content -Path $settingsPath -Force; " ^
+    "        Write-Output '%COLOR_GREEN%ClientAppSettings.json has been reinitialized with the new setting.%COLOR_RESET%' " ^
     "    } " ^
-    "    $json | ConvertTo-Json -Depth 10 | Set-Content -Path $settingsPath -Force; " ^
-    "    Write-Output '%COLOR_YELLOW%ClientAppSettings.json has been updated with the new setting.%COLOR_RESET%' " ^
     "}"
+
 echo %COLOR_GREEN%Modification of ClientAppSettings.json complete.%COLOR_RESET%
 pause
 goto bloxstrap_options
