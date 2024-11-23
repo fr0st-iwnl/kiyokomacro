@@ -57,5 +57,9 @@ Kiyoko's Video - https://www.youtube.com/watch?v=0uUlHG9pidc
 ### Community
    • More info → [Discord](https://discord.gg/RCc6ntue5j)
 
+### Contributing
+
+We welcome contributions to improve **Kiyoko's Mighty Omega Macro**! Please check out the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to contribute.
+
 ![Macro](https://raw.githubusercontent.com/fr0st-iwnl/assets/main/thumbnails/kiyokothumbnail2.png)
 
