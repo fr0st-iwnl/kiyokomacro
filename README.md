@@ -39,9 +39,9 @@ Free macro for Mighty Omega. My Discord for more info → [Link](https://discord
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Zen's Video - https://www.youtube.com/watch?v=4BbKNg0KraQ
+• Zen's Video - https://www.youtube.com/watch?v=4BbKNg0KraQ
 <br />
-Kiyoko's Video - https://www.youtube.com/watch?v=0uUlHG9pidc
+• Kiyoko's Video - https://www.youtube.com/watch?v=0uUlHG9pidc
 
 
 
@@ -53,9 +53,6 @@ Kiyoko's Video - https://www.youtube.com/watch?v=0uUlHG9pidc
 
 ### FAQ
    • If you encounter any issue/problem READ the → [FAQ](https://kiyokosmacros.netlify.app/faq)
-
-### Community
-   • More info → [Discord](https://discord.gg/RCc6ntue5j)
 
 ### Contributing
 
