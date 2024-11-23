@@ -1,0 +1,45 @@
+name: Bug Report
+description: Something is not working right
+labels: ["bug"]
+body:
+  - type: checkboxes
+    attributes:
+      label: Already reported ? *
+      description: Before reporting a bug, check if it already exists in the open or closed issues.
+      options:
+      - label: I have searched the existing open and closed issues.
+        required: true
+
+  - type: checkboxes
+    attributes:
+      label: Did you check the FAQ? *
+      description: |
+        Please make sure to check the FAQ before opening an issue.
+        FAQ: https://kiyokosmacros.netlify.app/faq
+      options:
+      - label: I have read the FAQ.
+        required: true
+
+  - type: textarea
+    id: desc
+    attributes:
+      label: Description
+      description: "What went wrong?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      description: "How can someone else reproduce the issue?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Images, Videos
+      description: |
+        Anything that can help. Please always ATTACH and not paste them.
+

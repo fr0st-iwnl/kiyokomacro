@@ -1,0 +1,46 @@
+name: Help Wanted
+description: If you need help with the macro, please open an issue here.
+labels: ["help wanted"]
+body:
+  - type: checkboxes
+    attributes:
+      label: Already searched for help? *
+      description: Before asking for help, check if a similar issue or solution already exists in the open or closed issues.
+      options:
+      - label: I have searched the existing open and closed issues.
+        required: true
+
+  - type: checkboxes
+    attributes:
+      label: Did you check the FAQ? *
+      description: |
+        Make sure you check the FAQ before asking for help.
+        FAQ: https://kiyokosmacros.netlify.app/faq
+      options:
+      - label: I have read the FAQ.
+        required: true
+
+  - type: textarea
+    id: help_description
+    attributes:
+      label: What Help Do You Need?
+      description: "Describe the issue you're facing or the help you're looking for with the macro."
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Your Setup
+      description: "Describe your setup, including any settings or versions you're using."
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Images or Videos
+      description: |
+        Attach any relevant images or videos that might help others assist you. Please attach them, do not paste them directly.
+    validations:
+      required: false

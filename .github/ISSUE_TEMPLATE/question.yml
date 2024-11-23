@@ -1,0 +1,19 @@
+name: Question
+description: If you have a question about the macro, please open it here.
+labels: ["question"]
+body:
+  - type: checkboxes
+    attributes:
+      label: Already reported? *
+      description: Before asking, check if your question has already been answered in the open or closed issues.
+      options:
+      - label: I have searched the existing open and closed issues.
+        required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: "Describe your question about the macro."
+    validations:
+      required: true
