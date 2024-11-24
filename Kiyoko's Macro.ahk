@@ -2,18 +2,20 @@
 #SingleInstance, force
 SetCapsLockState, Off 
 SetBatchLines -1
+SoundPlay, Icons\Sound\plug.mp3
 Version = 4.1
 if (A_ScreenDPI != 96) {
     Run, ms-settings:display
     MsgBox,	16,Kiyoko's Macro, Your Scale `& layout settings need to be on 100`%
     ExitApp
 }
+FileAppend, A_ScriptDir: %A_ScriptDir%`nA_WorkingDir: %A_WorkingDir%`n, %A_ScriptDir%\debug.log
 if !FileExist(A_ScriptDir "\Icons") {
-    MsgBox, the data file "Icons" folder is missing`nExtract file.
-    ExitApp
+    FileAppend, Icons folder not found.`n, %A_ScriptDir%\debug.log
 }
-SoundPlay, Icons\Sound\plug.mp3
-Menu, Tray, Icon, %A_ScriptDir%\Icons\Menu\KM.png
+
+
+Menu, Tray, Icon, Icons\Menu\KM.png
 
 ; -------------------------------------------------
 whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
