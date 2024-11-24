@@ -2,7 +2,6 @@
 #SingleInstance, force
 SetCapsLockState, Off 
 SetBatchLines -1
-SoundPlay, Icons\Sound\plug.mp3
 Version = 4.1
 if (A_ScreenDPI != 96) {
     Run, ms-settings:display
@@ -13,7 +12,8 @@ if !FileExist(A_ScriptDir "\Icons") {
     MsgBox, the data file "Icons" folder is missing`nExtract file.
     ExitApp
 }
-Menu, Tray, Icon, Icons\Menu\KM.png
+SoundPlay, Icons\Sound\plug.mp3
+Menu, Tray, Icon, %A_ScriptDir%\Icons\Menu\KM.png
 
 ; -------------------------------------------------
 whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
