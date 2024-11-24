@@ -9,7 +9,7 @@ if (A_ScreenDPI != 96) {
     MsgBox,	16,Kiyoko's Macro, Your Scale `& layout settings need to be on 100`%
     ExitApp
 }
-If !FileExist("Icons") {
+if !FileExist(A_ScriptDir "\Icons") {
     MsgBox, the data file "Icons" folder is missing`nExtract file.
     ExitApp
 }
