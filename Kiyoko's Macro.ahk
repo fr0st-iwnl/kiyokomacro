@@ -9,11 +9,10 @@ if (A_ScreenDPI != 96) {
     MsgBox,	16,Kiyoko's Macro, Your Scale `& layout settings need to be on 100`%
     ExitApp
 }
-FileAppend, A_ScriptDir: %A_ScriptDir%`nA_WorkingDir: %A_WorkingDir%`n, %A_ScriptDir%\debug.log
 if !FileExist(A_ScriptDir "\Icons") {
-    FileAppend, Icons folder not found.`n, %A_ScriptDir%\debug.log
+    MsgBox, the data file "Icons" folder is missing`nExtract file.
+    ExitApp
 }
-
 
 Menu, Tray, Icon, Icons\Menu\KM.png
 
