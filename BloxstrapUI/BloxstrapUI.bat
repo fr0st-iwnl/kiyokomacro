@@ -154,7 +154,7 @@ powershell -Command ^
     "        $json | ConvertTo-Json -Depth 10 | Set-Content -Path $settingsPath -Force; " ^
     "        Write-Output '%COLOR_YELLOW%ClientAppSettings.json has been updated with the new setting.%COLOR_RESET%' " ^
     "    } catch { " ^
-    "        Write-Output '%COLOR_RED%Error: The JSON file is malformed. Reinitializing the file with correct structure.%COLOR_RESET%'; " ^
+    "        Write-Output '%COLOR_RED%The JSON file is malformed. Reinitializing the file with correct structure.%COLOR_RESET%'; " ^
     "        $newJson = @{ 'FFlagEnableInGameMenuChromeABTest4' = '%setting_value%' }; " ^
     "        $newJson | ConvertTo-Json -Depth 10 | Set-Content -Path $settingsPath -Force; " ^
     "        Write-Output '%COLOR_GREEN%ClientAppSettings.json has been reinitialized with the new setting.%COLOR_RESET%' " ^
