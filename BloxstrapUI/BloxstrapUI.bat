@@ -84,22 +84,23 @@ set "bloxstrapPath=C:\Users\%USERNAME%\AppData\Local\Bloxstrap"
 if exist "%bloxstrapPath%" (
     echo %COLOR_BLUE%Bloxstrap is already installed.%COLOR_RESET%
 ) else (
-    if not exist "BloxstrapInstaller.exe" (
-        echo %COLOR_CYAN%Downloading the latest version of Bloxstrap...%COLOR_RESET%
-        powershell -Command ^
-            "$release = Invoke-RestMethod -Uri 'https://api.github.com/repos/bloxstraplabs/bloxstrap/releases/latest';" ^
-            "$downloadUrl = $release.assets | Where-Object { $_.name -match '.*.exe$' } | Select-Object -First 1 -ExpandProperty browser_download_url;" ^
-            "Invoke-WebRequest -Uri $downloadUrl -OutFile 'BloxstrapInstaller.exe';"
+    if not exist "%TEMP%\BloxstrapInstaller.exe" (
+    echo %COLOR_CYAN%Downloading the latest version of Bloxstrap...%COLOR_RESET%
+    powershell -Command ^
+        "$release = Invoke-RestMethod -Uri 'https://api.github.com/repos/bloxstraplabs/bloxstrap/releases/latest';" ^
+        "$downloadUrl = $release.assets | Where-Object { $_.name -match '.*.exe$' } | Select-Object -First 1 -ExpandProperty browser_download_url;" ^
+        "Invoke-WebRequest -Uri $downloadUrl -OutFile '%TEMP%\\BloxstrapInstaller.exe';"
     )
-    
-    if exist "BloxstrapInstaller.exe" (
-        echo %COLOR_GREEN%Installing Bloxstrap...%COLOR_RESET%
-        powershell -Command "Start-Process -FilePath 'BloxstrapInstaller.exe' -ArgumentList '/S' -Wait"
-        echo %COLOR_GREEN%Installation of Bloxstrap completed.%COLOR_RESET%
-        del "BloxstrapInstaller.exe" /Q
+
+    if exist "%TEMP%\BloxstrapInstaller.exe" (
+    echo %COLOR_GREEN%Installing Bloxstrap...%COLOR_RESET%
+    powershell -Command "Start-Process -FilePath '%TEMP%\\BloxstrapInstaller.exe' -ArgumentList '/S' -Wait"
+    echo %COLOR_GREEN%Installation of Bloxstrap completed.%COLOR_RESET%
+    del "%TEMP%\BloxstrapInstaller.exe" /Q
     ) else (
-        echo %COLOR_RED%Failed to download Bloxstrap installer.%COLOR_RESET%
+    echo %COLOR_RED%Failed to download Bloxstrap installer.%COLOR_RESET%
     )
+
 )
 pause
 goto bloxstrap_options
