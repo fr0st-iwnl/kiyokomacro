@@ -8,37 +8,46 @@ startTime := 0
 isMacroActive := false
 
 F1::
-    isPaused := !isPaused
-    isMacroActive := !isPaused
-
-    if (isPaused)
+    IfWinActive, Roblox
     {
-        SetTimer, ClickLoop, Off
-    }
-    else
-    {
-        startTime := A_TickCount
-        SetTimer, ClickLoop, 1000
+        isPaused := !isPaused
+        isMacroActive := !isPaused
 
-        WinGetPos, winX, winY, winWidth, winHeight, Roblox
-        SysGet, screenWidth, 78 
-        SysGet, screenHeight, 79
-
-        if (winWidth != screenWidth or winHeight != screenHeight)
+        if (isPaused)
         {
-            ToolTip, Resizing screen...
-            Sleep, 2000
-
-            Send, {F11}
-
-            ToolTip
+            SetTimer, ClickLoop, Off
         }
         else
         {
-            ToolTip, Roblox is already in fullscreen mode.
-            Sleep, 2000
-            ToolTip
+            startTime := A_TickCount
+            SetTimer, ClickLoop, 1000
+
+            WinGetPos, winX, winY, winWidth, winHeight, Roblox
+            SysGet, screenWidth, 78 
+            SysGet, screenHeight, 79
+
+            if (winWidth != screenWidth or winHeight != screenHeight)
+            {
+                ToolTip, Resizing screen...
+                Sleep, 2000
+
+                Send, {F11}
+
+                ToolTip
+            }
+            else
+            {
+                ToolTip, Roblox is already in fullscreen mode.
+                Sleep, 2000
+                ToolTip
+            }
         }
+    }
+    else
+    {
+        ToolTip, Please go to Roblox and press F1 to start the macro.
+        Sleep, 2000
+        ToolTip
     }
 Return
 
@@ -57,7 +66,7 @@ ClickLoop:
     }
 
     elapsedTime := (A_TickCount - startTime) // 60000
-    ToolTip, F1 Start (%elapsedTime% minutes) | F3 Close Roblox | J Exit Macro
+    ToolTip, F1 Start (%elapsedTime% minute/s) | F3 Close Roblox | J Exit Macro
 
 Return
 
