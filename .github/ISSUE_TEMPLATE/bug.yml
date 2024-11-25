@@ -2,9 +2,18 @@ name: Bug Report
 description: Something is not working right
 labels: ["bug"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ### ⚠️ **Important: Please Read Before Submitting**
+
+        **Do NOT open issues related to RDP or non-macro-related problems.**  
+        Such issues will be **closed immediately**.
+
+
   - type: checkboxes
     attributes:
-      label: Already reported ? *
+      label: Already reported? *
       description: Before reporting a bug, check if it already exists in the open or closed issues.
       options:
       - label: I have searched the existing open and closed issues.
@@ -42,4 +51,3 @@ body:
       label: Images, Videos
       description: |
         Anything that can help. Please always ATTACH and not paste them.
-
