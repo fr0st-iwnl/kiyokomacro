@@ -1894,7 +1894,7 @@ GetLine(Text, var) {
 CheckVars(i, type) {
     for _, v in i {
         if (!v) {
-            MsgBox,,Kiyoko's Macro, Missing infomation %v% is missing
+            MsgBox,,Kiyoko's Macro, You must choose your settings for %type%
             ExitApp
         }
         Item .= v ","
