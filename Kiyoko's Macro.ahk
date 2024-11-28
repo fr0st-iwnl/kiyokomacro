@@ -786,7 +786,7 @@ SP:
             Notify("Reset: " A_TickCount - Timer)
             IniRead, allowed, settings.ini, Additional_Settings, SPFreeze
             If (allowed = "ERROR") or (!allowed) {
-                IniWrite, "true", settings.ini, Additional_Settings, SPFreeze
+                IniWrite, "false", settings.ini, Additional_Settings, SPFreeze
             }
             If (A_TickCount - CheckTimer > 300000) and (allowed = "true") { ; 5 Minute
                 ; Inf Stam
