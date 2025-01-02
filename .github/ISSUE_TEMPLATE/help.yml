@@ -39,7 +39,7 @@ body:
   - type: textarea
     id: environment
     attributes:
-      label: Your Setup
+      label: Your Settings
       description: "Describe your setup, including any settings or versions you're using."
     validations:
       required: false
