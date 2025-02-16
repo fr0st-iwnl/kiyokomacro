@@ -81,6 +81,14 @@ goto bloxstrap_options
 :install_bloxstrap
 set "bloxstrapPath=C:\Users\%USERNAME%\AppData\Local\Bloxstrap"
 
+
+:: Display warning message
+echo %COLOR_RED%WARNING: IMPORTANT INSTALLATION NOTICE%COLOR_RESET%
+echo %COLOR_YELLOW%When installing Bloxstrap, do NOT change the default installation path.%COLOR_RESET%
+echo %COLOR_YELLOW%The default path should be: %bloxstrapPath%%COLOR_RESET%
+echo %COLOR_YELLOW%Changing the installation path will prevent the UI modification features from working correctly.%COLOR_RESET%
+echo.
+
 if exist "%bloxstrapPath%" (
     echo %COLOR_BLUE%Bloxstrap is already installed.%COLOR_RESET%
 ) else (
@@ -141,24 +149,39 @@ powershell -Command ^
     "$jsonContent = Get-Content -Path $settingsPath -Raw -ErrorAction SilentlyContinue; " ^
     "if ($jsonContent -eq $null -or $jsonContent.Trim() -eq '') { " ^
     "    Write-Output '%COLOR_YELLOW%ClientAppSettings.json is empty or missing. Creating new JSON structure...%COLOR_RESET%'; " ^
-    "    $newJson = @{ 'FFlagEnableInGameMenuChromeABTest4' = '%setting_value%' }; " ^
+    "    $newJson = @{ " ^
+    "        'FFlagEnableInGameMenuChromeABTest4' = '%setting_value%'; " ^
+    "        'FFlagEnableInGameMenuChrome' = '%setting_value%'; " ^
+    "        'FFlagEnableInGameMenuSongbirdABTest' = '%setting_value%' " ^
+    "    }; " ^
     "    $newJson | ConvertTo-Json -Depth 10 | Set-Content -Path $settingsPath -Force; " ^
-    "    Write-Output '%COLOR_GREEN%ClientAppSettings.json has been created with the new setting.%COLOR_RESET%' " ^
+    "    Write-Output '%COLOR_GREEN%ClientAppSettings.json has been created with all settings.%COLOR_RESET%' " ^
     "} else { " ^
     "    try { " ^
     "        $json = $jsonContent | ConvertFrom-Json; " ^
-    "        if (-not $json.PSObject.Properties.Match('FFlagEnableInGameMenuChromeABTest4')) { " ^
-    "            $json | Add-Member -MemberType NoteProperty -Name 'FFlagEnableInGameMenuChromeABTest4' -Value '%setting_value%'; " ^
-    "        } else { " ^
-    "            $json.FFlagEnableInGameMenuChromeABTest4 = '%setting_value%'; " ^
+    "        $flags = @( " ^
+    "            'FFlagEnableInGameMenuChromeABTest4', " ^
+    "            'FFlagEnableInGameMenuChrome', " ^
+    "            'FFlagEnableInGameMenuSongbirdABTest' " ^
+    "        ); " ^
+    "        foreach ($flag in $flags) { " ^
+    "            if (-not $json.PSObject.Properties.Match($flag)) { " ^
+    "                $json | Add-Member -MemberType NoteProperty -Name $flag -Value '%setting_value%'; " ^
+    "            } else { " ^
+    "                $json.$flag = '%setting_value%'; " ^
+    "            } " ^
     "        } " ^
     "        $json | ConvertTo-Json -Depth 10 | Set-Content -Path $settingsPath -Force; " ^
-    "        Write-Output '%COLOR_YELLOW%ClientAppSettings.json has been updated with the new setting.%COLOR_RESET%' " ^
+    "        Write-Output '%COLOR_YELLOW%ClientAppSettings.json has been updated with all settings.%COLOR_RESET%' " ^
     "    } catch { " ^
-    "        Write-Output '%COLOR_RED%The JSON file is malformed. Reinitializing the file with correct structure.%COLOR_RESET%'; " ^
-    "        $newJson = @{ 'FFlagEnableInGameMenuChromeABTest4' = '%setting_value%' }; " ^
+    "        Write-Output '%COLOR_YELLOW%The JSON file is malformed. Reinitializing the file with correct structure.%COLOR_RESET%'; " ^
+    "        $newJson = @{ " ^
+    "            'FFlagEnableInGameMenuChromeABTest4' = '%setting_value%'; " ^
+    "            'FFlagEnableInGameMenuChrome' = '%setting_value%'; " ^
+    "            'FFlagEnableInGameMenuSongbirdABTest' = '%setting_value%' " ^
+    "        }; " ^
     "        $newJson | ConvertTo-Json -Depth 10 | Set-Content -Path $settingsPath -Force; " ^
-    "        Write-Output '%COLOR_GREEN%ClientAppSettings.json has been reinitialized with the new setting.%COLOR_RESET%' " ^
+    "        Write-Output '%COLOR_GREEN%ClientAppSettings.json has been reinitialized with all settings.%COLOR_RESET%' " ^
     "    } " ^
     "}"
 
